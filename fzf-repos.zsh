@@ -19,6 +19,6 @@ function fzf-repos::list() {
 # $2: repos level
 function repos-cd() { cd "$1/$(fzf-repos::list "$1" "${2:-1}" | fzf)" && pwd; }
 
-function zplug-cd()   { repos-cd ~/.zplug/repos 2; }
-function vimplug-cd() { repos-cd ~/.vim/plugged;   }
-function tpm-cd()     { repos-cd ~/.tmux/plugins;  }
+function zcd() { repos-cd ~/.zplug/repos 2; }
+function vcd() { repos-cd ~/.vim/plugged;  }
+function tcd() { repos-cd ~/.tmux/plugins; }
